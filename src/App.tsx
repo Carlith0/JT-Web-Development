@@ -1,5 +1,5 @@
 import "./App.css";
-import Homepage from "./homepage/homepage";
+import Homepage from "./Homepage/Homepage";
 import Proces from "./Proces/Proces";
 import Offer from "./Offer/Offer";
 import Projects from "./Projects/Projects";
