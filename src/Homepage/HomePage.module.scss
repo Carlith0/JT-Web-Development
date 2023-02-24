@@ -1,0 +1,68 @@
+@use "../style/Variables.scss" as v;
+.HomePage{
+    background-image: url("../../img/homeBCKG.png");
+    color: rgb(255, 255, 255);
+    background-color: black;
+    margin: 0;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    header{
+        padding-top: map-get(v.$spacing, "xl");
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .Name{
+            h1{
+                font-family: 'Montserrat';
+                font-weight: 800;
+                font-size: 48px;
+            }
+            h5{
+                font-family: 'Montserrat';
+                color: map-get(v.$colors, "aqua" );
+                font-weight: 600;
+            }
+
+        }
+        nav{
+            padding-top: map-get(v.$spacing, "md");
+
+            ul{
+                display: flex;
+                li{
+                    margin-left: 2.2rem;
+                    list-style:  none;
+                    a{
+                        text-decoration: none;
+                        font-family: 'Montserrat';
+                        font-weight: 300;
+                        font-size: 18px;
+                        color: rgb(255, 255, 255);
+                        transition: 0.3s;
+
+                        &:hover{
+                            color: map-get(v.$colors, "aqua" );
+                            transition: 0.3s;
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        h1{
+            font-family: 'Montserrat';
+            font-weight: 800;
+            font-size: 48px; 
+            text-align: right;
+            margin-top: 10%;
+            margin-right: map-get(v.$spacing, "2xl" );
+            
+        }
+    }
+}
+@media (max-width:800px){
+    
+}
