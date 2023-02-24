@@ -1,0 +1,125 @@
+@use "../style/Variables.scss" as v;
+.HomePage{
+    background-image: url("../../img/homeBCKG.png");
+    color: rgb(255, 255, 255);
+    background-color: black;
+    margin: 0;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    header{
+        padding-top: map-get(v.$spacing, "xl");
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .Name{
+            h1{
+                font-family: 'Montserrat';
+                font-weight: 800;
+                font-size: 48px;
+            }
+            h5{
+                font-family: 'Montserrat';
+                color: map-get(v.$colors, "aqua" );
+                font-weight: 600;
+            }
+
+        }
+        nav{
+            padding-top: map-get(v.$spacing, "md");
+            ul{
+                display: flex;
+                li{
+                    margin-left: 2rem;
+                    list-style:  none;
+                    a{
+                        text-decoration: none;
+                        font-family: 'Montserrat';
+                        font-weight: 300;
+                        font-size: 16px;
+                        color: rgb(255, 255, 255);
+                        transition: 0.3s;
+                        &:hover{
+                            color: map-get(v.$colors, "aqua" );
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+        .Hamburger{
+            display: none;
+        }
+    }
+    main{
+        h1{
+            font-family: 'Montserrat';
+            font-weight: 800;
+            font-size: 48px; 
+            text-align: right;
+            margin-top: 10%;
+            margin-right: map-get(v.$spacing, "2xl" );
+        }
+    }
+    .MobileMenu{
+        display: none;
+    }
+}
+@media (max-width:800px){
+    header{
+        padding-top: map-get(v.$spacing, "xsm")!important;
+        align-items: center;
+        nav{
+            display: none;
+        }
+        .Hamburger{
+            display: block!important;
+            height: 64px;
+            width: 64px;
+            cursor: pointer;
+        }
+    }
+    .MobileMenu{
+        display: flex!important;
+		position: fixed;
+		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.716);
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+        .MobileNav {
+            display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: rgb(232, 234, 232);
+			height: 100%;
+			width: 35%;
+			img {
+				cursor: pointer;
+				height: 32px;
+				width: 32px;
+				position: absolute;
+				right: 8px;
+				top: 8px;
+			}
+            ul{
+                li{
+                    list-style:  none;
+                    a{
+                        text-decoration: none;
+                        font-family: 'Montserrat';
+                        font-weight: 300;
+                        color: rgb(0, 0, 0);
+                    }
+                }
+            }
+		}
+		.Empty {
+			height: 100%;
+			width: 65%;
+			backdrop-filter: blur(3px);
+		}
+    }
+}

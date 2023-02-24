@@ -1,14 +1,13 @@
-import "./App.css";
-import Homepage from "./Homepage/Homepage";
+import Homepage from "./Homepage/HomePage";
 import Proces from "./Proces/Proces";
 import Offer from "./Offer/Offer";
 import Projects from "./Projects/Projects";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
-
+import Styles from "./App.module.scss"
 function App() {
   return (
-    <div className="App">
+    <div className={Styles.App}>
       <Homepage />
       <hr />
       <Proces />
