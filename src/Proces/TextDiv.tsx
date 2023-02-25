@@ -1,4 +1,4 @@
-import Styles from "./ConsultationTextDiv.module.scss";
+import Styles from "./TextDiv.module.scss";
 type Content = {
     id: any;
     heading: String;
