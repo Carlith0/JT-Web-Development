@@ -6,20 +6,26 @@
     margin: 0;
     min-height: 100vh;
     background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    
     header{
+        z-index: 2;
+        position: relative;
         padding-top: map-get(v.$spacing, "xl");
         margin: auto;
         width: 90%;
         display: flex;
         justify-content: space-between;
         .Name{
+            font-family: 'Montserrat';
+            text-align: center;
             h1{
-                font-family: 'Montserrat';
                 font-weight: 800;
                 font-size: 48px;
             }
-            h5{
-                font-family: 'Montserrat';
+            h4{
                 color: map-get(v.$colors, "aqua" );
                 font-weight: 600;
             }
@@ -51,75 +57,184 @@
             display: none;
         }
     }
+    
+    
     main{
+        z-index: 2;
+        position: relative;
         h1{
             font-family: 'Montserrat';
             font-weight: 800;
             font-size: 48px; 
+            margin-top: 15%;
+            margin-right: map-get(v.$spacing, "4xl");
+            position: relative;
             text-align: right;
-            margin-top: 10%;
-            margin-right: map-get(v.$spacing, "2xl" );
+            
+        }
+        h1:after{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 10%;
+            height: 8px;
+            background-color: map-get(v.$colors, "aqua");
+        }
+        
+        
+    }
+    .Start, .Arrow{
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+    }
+    .Start{
+        transform: translateX(-50%)!important;
+        top: 85%;
+        a{
+            text-decoration: none;
+            font-family: 'Montserrat';
+            font-weight: 300;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            transition: 0.3s;
+            &:hover{
+                color: map-get(v.$colors, "aqua" );
+                transition: 0.3s;
+            }
         }
     }
+    .Arrow{
+        top: 92%;
+        animation: 4s ease-out infinite ArrowShake;
+        animation-fill-mode: forwards;
+    }
     .MobileMenu{
+        z-index: 2;
+        position: relative;
         display: none;
+    }
+    .BackgroundBlur{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        left: 0;
+        top:0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
     }
 }
 @media (max-width:800px){
-    header{
-        padding-top: map-get(v.$spacing, "xsm")!important;
-        align-items: center;
-        nav{
-            display: none;
+    .HomePage{
+        background-image: url("../../img/homeBCKGmobile.png");
+        header{
+            padding-top: map-get(v.$spacing, "xsm")!important;
+            align-items: center;
+            nav{
+                display: none;
+            }
+            .Hamburger{
+                display: block!important;
+                height: 64px;
+                width: 64px;
+                cursor: pointer;
+            }
         }
-        .Hamburger{
-            display: block!important;
-            height: 64px;
-            width: 64px;
-            cursor: pointer;
-        }
-    }
-    .MobileMenu{
-        display: flex!important;
-		position: fixed;
-		z-index: 2;
-		background-color: rgba(0, 0, 0, 0.716);
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-        .MobileNav {
-            display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			background-color: rgb(232, 234, 232);
-			height: 100%;
-			width: 35%;
-			img {
-				cursor: pointer;
-				height: 32px;
-				width: 32px;
-				position: absolute;
-				right: 8px;
-				top: 8px;
-			}
-            ul{
-                li{
-                    list-style:  none;
-                    a{
-                        text-decoration: none;
-                        font-family: 'Montserrat';
-                        font-weight: 300;
-                        color: rgb(0, 0, 0);
+        .MobileMenu{
+            display: flex!important;
+            position: fixed;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.716);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            .MobileNav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: map-get(v.$colors, "background-color");
+                height: 100%;
+                width: 50%;
+                position: relative;
+                padding-top: map-get(v.$spacing, "2xl" );
+                justify-content: space-evenly;
+                .CloseImage{
+                    cursor: pointer;
+                    height: 25px;
+                    width: 24px;
+                    position: absolute;
+                    right: 25px;
+                    top: 25px;
+                    color: map-get(v.$colors, "font-color");
+                }
+                ul{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    row-gap: 50px;
+                    padding: 0;
+                    
+                    li{
+                        list-style:  none;
+                        a{
+                            text-decoration: none;
+                            font-family: 'Montserrat';
+                            font-weight: 300;
+                            color: map-get(v.$colors, "font-color");
+                            transition: all 0.5s;
+                        }
+                        a:hover{
+                            color: map-get(v.$colors, "aqua");
+                        }
+                        
                     }
                 }
+                .SocialLinks{
+                    width: 100%;
+                    text-align: center;
+                    p{
+                        font-family: 'Montserrat';
+                        color: map-get(v.$colors, "social-links"); 
+                    }
+                    hr{
+                        margin: map-get(v.$spacing, "md" );
+                        width: 70%;
+                        margin-left: 15%;
+                        border: 1px solid;
+                        border-color: map-get(v.$colors, "social-links");
+                    }
+                    div{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-evenly;
+                        img{
+                            height: 30px;
+                        }
+                    }
+                }
+                
             }
-		}
-		.Empty {
-			height: 100%;
-			width: 65%;
-			backdrop-filter: blur(3px);
-		}
+            .Empty {
+                height: 100%;
+                width: 50%;
+                backdrop-filter: blur(1px);
+            }
+        }
     }
+    .BackgroundBlur{
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes ArrowShake{
+    0%, 60%, 80%, 100%{
+        transform: translateX(-50%) translateY(0px);
+    }
+    70%, 90%{
+        transform: translateX(-50%) translateY(10px);
+    }
+    
 }

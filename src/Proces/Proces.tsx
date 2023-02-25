@@ -2,7 +2,7 @@ import React from "react";
 
 function Proces() {
   return (
-    <div className="Proces">
+    <div className="Proces" id="proces">
       <h1>Proces</h1>
     </div>
   );
