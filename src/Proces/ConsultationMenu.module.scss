@@ -1,0 +1,29 @@
+@use "../style/Variables.scss" as v;
+.KonsultacjaMenu{
+    width: 100%;
+    height: 100px;
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        text-decoration: none;
+        margin: 3.5rem;
+        color: #CCCC;
+        font-family: 'Montserrat';
+        color: map-get(v.$colors, "gray" );
+        font-weight: 800;
+        font-size: 15px;
+        transition: 0.4s;
+        &:hover{
+            transition: 0.4s;
+            color: map-get(v.$colors, "aqua" )!important;
+            .Current{
+                color: map-get(v.$colors, "gray" );
+            }
+        }
+    }   
+    .Current{
+        color: map-get(v.$colors, "aqua" );
+    }
+}

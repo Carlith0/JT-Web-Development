@@ -1,9 +1,11 @@
 import React from "react";
-
+import ProcesConsultation from "./ProcesConsultation";
+import KonsultacjaMenu from "./ConsultationMenu";
 function Proces() {
   return (
     <div className="Proces">
-      <h1>Proces</h1>
+      <KonsultacjaMenu></KonsultacjaMenu>
+      <ProcesConsultation></ProcesConsultation>
     </div>
   );
 }
