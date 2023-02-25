@@ -1,9 +1,9 @@
 import ProcesConsultation from "./ProcesConsultation";
-import KonsultacjaMenu from "./ConsultationMenu";
+import ConsultationMenu from "./ConsultationMenu";
 function Proces() {
   return (
     <div className="Proces" id="proces">
-      <KonsultacjaMenu></KonsultacjaMenu>
+      <ConsultationMenu></ConsultationMenu>
       <ProcesConsultation></ProcesConsultation>
     </div>
   );

@@ -2,9 +2,9 @@
 .ProcesConsultation{
     background-color: map-get(v.$colors, "dark-back" );
     height: 100vh;
+
     .Wrapper{
-        padding-top: 12rem;
-        padding-bottom: 4rem;
+        padding-top: 6rem;
         margin: auto;
         width: 80%;
         display: flex;
@@ -12,7 +12,7 @@
         .Left{
             width: 50%;
             img{
-                width: 400px;
+                width: 600px;
                 -webkit-box-shadow: 4px 3px 16px -3px rgba(66, 68, 90, 1);
                 -moz-box-shadow: 4px 3px 16px -3px rgba(66, 68, 90, 1);
                 box-shadow: 4px 3px 16px -3px rgba(66, 68, 90, 1);
@@ -21,27 +21,23 @@
         }
         .Right{
             padding-left: 2rem;
-            .Description{
-                padding-top: 0.2rem;
-                h5{
-                    font-family: 'Montserrat';
-                    font-weight: 800;
-                    font-size: 20px;
-                }
-                p{
-                    padding-top: 0.1rem;
-                    font-family: 'Montserrat';
-                    font-weight: 300;
-                    font-size: 16px;
-                    padding-left: 0.5rem;
-                }
-                }
-                hr{
-                    height: 2px;
-                    background-color: #404040;
-                    border: none;
+            button{
+                margin-top: 1rem;
+                float: right;
+                margin-right: 3rem;
+                padding-left: 4rem;
+                padding-right: 4rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 600;
+                border: none;
+                border-radius: 5px;
 
-                }
+                cursor: pointer;
+                background-color: map-get(v.$colors, "aqua");
+            }
             }
            
     }
