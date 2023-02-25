@@ -4,7 +4,8 @@ import Offer from "./Offer/Offer";
 import Projects from "./Projects/Projects";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
-import Styles from "./App.module.scss"
+import Styles from "./App.module.scss";
+
 function App() {
   return (
     <div className={Styles.App}>
@@ -21,5 +22,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
