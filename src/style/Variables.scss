@@ -4,9 +4,15 @@
 
 $colors: (
 	"aqua": #17C1C0,
-	"font-color": #f9f9f9,
+	"font-color": #c2bdbd,
+	"dark-back": #1E1E1E,
+	"gray": #404040,
+	"gold": #FFA831,
 	"background-color": #1e1e1e,
 	"social-links": #616161,
+	"pink": #F782B5,
+	"green": #25D140,
+	"orange": #FC9100,
 );
 
 $spacing: (
@@ -19,6 +25,9 @@ $spacing: (
 	"3xl": 6rem,
 	"4xl": 8rem,
 	"5xl": 10rem,
+	"xmd": 0.7rem,
 );
 
-$border-radius: 5px;
+$border-radius: (
+	"standard": 5px,
+);
