@@ -12,7 +12,7 @@ function Homepage() {
     <div className={Styles.HomePage} id="home">
       <header>
         <motion.div
-          variants={fadeIn("right", 0.3,0.9)}
+          variants={fadeIn("right", 0.3, 0.9)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.8 }}
@@ -23,7 +23,7 @@ function Homepage() {
         </motion.div>
         <nav>
           <motion.ul
-            variants={fadeIn("left", 0.5,0.6)}
+            variants={fadeIn("left", 0.5, 0.6)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
@@ -52,7 +52,7 @@ function Homepage() {
 
       <main>
         <motion.h1
-          variants={fadeIn("down", 0.9,0.5)}
+          variants={fadeIn("down", 0.9, 0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
@@ -78,7 +78,7 @@ function Homepage() {
       </main>
 
       <motion.p
-        variants={fadeIn("", 4,0.2)}
+        variants={fadeIn("", 4, 0.2)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
@@ -87,7 +87,7 @@ function Homepage() {
         <a href="#proces">Click to start</a>
       </motion.p>
       <motion.img
-        variants={fadeIn("", 4,0.5)}
+        variants={fadeIn("", 4, 0.5)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
@@ -106,27 +106,35 @@ function Homepage() {
               onClick={() => setOpen(false)}
             />
             <motion.ul
-              variants={fadeIn("", 0.2,0.2)}
+              variants={fadeIn("", 0.2, 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
             >
               <li>
-                <a href="#">Home</a>
+                <a href="#home" onClick={() => setOpen(false)}>
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <a href="#projects" onClick={() => setOpen(false)}>
+                  Projects
+                </a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="#offer" onClick={() => setOpen(false)}>
+                  About
+                </a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#contact" onClick={() => setOpen(false)}>
+                  Contact
+                </a>
               </li>
             </motion.ul>
             <motion.div
               className={Styles.SocialLinks}
-              variants={fadeIn("", 0.4,0.2)}
+              variants={fadeIn("", 0.4, 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
@@ -143,6 +151,12 @@ function Homepage() {
         </div>
       ) : null}
       <div className={Styles.BackgroundBlur} />
+      <div
+        className={Styles.ContactHook}
+        onClick={() => (location.href = "#contact")}
+      >
+        <img src="../../img/contactHook.svg" alt="contactHook" />
+      </div>
     </div>
   );
 }
