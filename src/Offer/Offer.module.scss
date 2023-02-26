@@ -44,7 +44,7 @@
                     display: flex;
                     cursor: pointer;
                     transition: all 0.5s;
-                    color: map-get(v.$colors, "font-color");
+                    color: #FBF9F9;
                     h4{
                         margin: auto;
                     }
@@ -99,7 +99,7 @@
                         transform: translateX(-10px);
                     }
                     .DesignDescriptionContent, .AppDescriptionContent, .PageDescriptionContent{
-                        padding: map-get(v.$spacing, "sm" );
+                        padding: map-get(v.$spacing, "md" );
                         cursor: pointer;
                         transition: all 0.5s;
                         h5{
@@ -109,6 +109,7 @@
                             padding: map-get(v.$spacing, "sm" );
                         }
                         hr{
+                            border: 1px solid #a8a8a8;
                             margin: map-get(v.$spacing, "sm" );
                         }
                     }

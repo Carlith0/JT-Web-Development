@@ -11,9 +11,7 @@ function App() {
     <div className={Styles.App}>
       <Homepage />
       <Proces />
-      <hr />
       <Offer />
-      <hr />
       <Projects />
       <hr />
       <About />
