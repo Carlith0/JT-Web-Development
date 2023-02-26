@@ -3,19 +3,25 @@ import TextDiv from "./TextDiv";
 function ProcesConsultation() {
   const contents = [{
       id:1,
-      heading: "Jak Wyglądają nasze konsultacje?",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
-  },     
+      heading: "Jak Wyglądają konsultacja?",
+      text: "Konsultacja może odbywać się na różne sposoby, w tym osobiście, przez telefon, e-mail lub czat. Omawiamy kwestie takie jak przeznaczenie strony,  preferencje klienta oraz cene projektu.",
+      hcolor: "white",
+      pcolor: "font-color",
+    },     
   {
   id:2,
   heading: "Na co zwracamy szczególną uwagę?",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
-  },     
+  hcolor: "white",
+  pcolor: "font-color",  
+},     
   {
   id:3,
   heading: "Na co zwracamy szczególną uwagę?",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
-  },
+  hcolor: "white",
+  pcolor: "font-color",  
+},
 ];
 
   return (
@@ -31,8 +37,7 @@ function ProcesConsultation() {
        
         <div className={Styles.Right}>
           <TextDiv contents={contents}></TextDiv>
-          <button>Start now</button>
-
+          <button className={Styles.ConsultationButton}>Start now</button>
         </div>
       </div>
       

@@ -1,11 +1,11 @@
 @use "../style/Variables.scss" as v;
 .Description{
-    padding-top: 0.2rem;
+    padding-top: 1.2rem;
     margin-bottom: 1rem;
     h5{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-family: "Montserrat";
-        font-weight: 600;
+        font-weight: 700;
         color: white;
         margin-left: 1.2rem;
         margin-bottom: map-get(v.$spacing, "esm");
@@ -14,10 +14,10 @@
     p{
         color: map-get(v.$colors, "font-color");
         margin-bottom: map-get(v.$spacing, "xsm");
-        font-size: 1.3rem;
-        font-family: "Lato";
-        font-weight: 300;
-        margin-left: 3rem;
+        font-size: 1.2rem;
+        font-family: "Montserrat";
+        font-weight: 400;
+        margin-left: 2rem;
     }
     }
     hr{

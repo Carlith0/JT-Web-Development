@@ -1,8 +1,10 @@
 import Styles from "./TextDiv.module.scss";
 type Content = {
-    id: any;
+    id: String;
     heading: String;
     text: String;
+    hcolor: String;
+    pcolor: String;
   };
 function TextDiv(props:any){
     const contents = props.contents;
@@ -10,13 +12,12 @@ function TextDiv(props:any){
         <div>
             {contents.map((content:Content)=>(
                 <div className={Styles.Description}>
-                    <h5>{content.heading}</h5>
+                    <h5 style={{color: `${content.hcolor}`}}>{content.heading}</h5>
                     <p>{content.text}</p>
                    <hr />
                 </div>
             ))}
         </div>
     )
-    
 }
 export default TextDiv;

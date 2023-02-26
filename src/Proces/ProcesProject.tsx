@@ -5,17 +5,21 @@ function ProcesConsultation() {
       id:1,
       heading: "Czego używamy do projektowania?",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
+      hcolor: "Black",
+      pcolor: "social-links",
   },     
   {
   id:2,
   heading: "Co wyróżnia nasze projekty?",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
-  },     
+  hcolor: "Black",
+  pcolor: "social-links",  
+},     
 ];
 
   return (
 
-    <div className={Styles.Processes}>
+    <div className={Styles.Processes} style={{backgroundColor: "#F9F9F9"}} >
       <div className={Styles.ProjectMenu}>
         <a href="#" >01 - KONSULTACJA</a><a href="#" className={Styles.Current}>02 - PROJEKT WIZUALNY</a><a href="#">03 - REALIZACJA</a>
       </div>
@@ -25,7 +29,7 @@ function ProcesConsultation() {
         </div>
        
         <div className={Styles.Right}>
-          <TextDiv contents={contents}></TextDiv>
+          <TextDiv contents={contents} style={{backgroundColor: "#wwww"}}></TextDiv>
           <button className={Styles.ProjectButton}>Start now</button>
 
         </div>

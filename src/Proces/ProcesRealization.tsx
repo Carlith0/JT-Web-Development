@@ -5,17 +5,23 @@ function ProcesRealization() {
       id:1,
       heading: "W jaki sposób realizujemy zamówienia?",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
+      hcolor: "white",
+      pcolor: "font-color",  
   },     
   {
   id:2,
   heading: "Ile średnio potrzebujemy na realizację projektu?",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
-  },     
+  hcolor: "white",
+  pcolor: "font-color",  
+},     
   {
   id:3,
   heading: "Na co zwracamy szczególną uwagę?",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum dolor asperiores natus velit, doloremque maxime porro itaque, quia modi est laudantium nobis minus optio, laboriosam animi deleniti fugit eligendi.",
-  },
+  hcolor: "white",
+  pcolor: "font-color",    
+},
 ];
 
   return (
