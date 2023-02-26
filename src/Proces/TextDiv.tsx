@@ -1,3 +1,6 @@
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 import Styles from "./TextDiv.module.scss";
 type Content = {
     id: String;
@@ -11,11 +14,18 @@ function TextDiv(props:any){
     return(
         <div>
             {contents.map((content:Content)=>(
-                <div className={Styles.Description}>
+                <motion.div
+                variants={fadeIn("left", 0.3, 0.6)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+                className={Styles.Description}
+                >
                     <h5 style={{color: `${content.hcolor}`}}>{content.heading}</h5>
-                    <p>{content.text}</p>
-                   <hr />
-                </div>
+                    <p style={{color: `${content.pcolor}`}}>{content.text}</p>
+                    <hr />
+                </motion.div>
+
             ))}
         </div>
     )

@@ -12,10 +12,10 @@ function Homepage() {
     <div className={Styles.HomePage} id="home">
       <header>
         <motion.div
-          variants={fadeIn("right", 0.3)}
+          variants={fadeIn("right", 0.3,0.9)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: false, amount: 0.8 }}
           className={Styles.Name}
         >
           <h1>JT WEB.</h1>
@@ -23,7 +23,7 @@ function Homepage() {
         </motion.div>
         <nav>
           <motion.ul
-            variants={fadeIn("left", 0.5)}
+            variants={fadeIn("left", 0.5,0.6)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
@@ -52,7 +52,7 @@ function Homepage() {
 
       <main>
         <motion.h1
-          variants={fadeIn("down", 0.9)}
+          variants={fadeIn("down", 0.9,0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
@@ -78,7 +78,7 @@ function Homepage() {
       </main>
 
       <motion.p
-        variants={fadeIn("", 4)}
+        variants={fadeIn("", 4,0.2)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
@@ -87,7 +87,7 @@ function Homepage() {
         <a href="#proces">Click to start</a>
       </motion.p>
       <motion.img
-        variants={fadeIn("", 4)}
+        variants={fadeIn("", 4,0.5)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
@@ -106,7 +106,7 @@ function Homepage() {
               onClick={() => setOpen(false)}
             />
             <motion.ul
-              variants={fadeIn("", 0.2)}
+              variants={fadeIn("", 0.2,0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
@@ -126,7 +126,7 @@ function Homepage() {
             </motion.ul>
             <motion.div
               className={Styles.SocialLinks}
-              variants={fadeIn("", 0.4)}
+              variants={fadeIn("", 0.4,0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
