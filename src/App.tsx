@@ -10,7 +10,6 @@ function App() {
   return (
     <div className={Styles.App}>
       <Homepage />
-      <hr />
       <Proces />
       <hr />
       <Offer />

@@ -1,9 +1,14 @@
-import React from "react";
+import ProcesConsultation from "./ProcesConsultation";
+import ProcesProject from "./ProcesProject";
+import ProcesRealization from "./ProcesRealization";
 
 function Proces() {
   return (
     <div className="Proces" id="proces">
-      <h1>Proces</h1>
+      <ProcesConsultation></ProcesConsultation>
+      <ProcesProject></ProcesProject>
+      <ProcesRealization></ProcesRealization>
+
     </div>
   );
 }

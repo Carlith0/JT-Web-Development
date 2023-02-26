@@ -1,0 +1,194 @@
+@use "../style/Variables.scss" as v;
+.Processes{
+    padding-bottom: 100px;
+    .Wrapper{
+        margin: auto;
+        width: 80%;
+        display: flex;
+
+        .Left{
+            width: 50%;
+            img{
+                width: 600px;
+                -webkit-box-shadow: 4px 3px 16px -3px rgba(66, 68, 90, 1);
+                -moz-box-shadow: 4px 3px 16px -3px rgba(66, 68, 90, 1);
+                box-shadow: 4px 3px 16px -3px rgba(66, 68, 90, 1);
+                border-radius: 3px;
+            }
+        }
+        .Right{
+            padding-left: 2rem;
+            button{
+                margin-top: 3rem;
+                float: right;
+                margin-right: 3rem;
+                font-family: "Montserrat";
+                font-size: 18px;
+                font-weight: 600;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: map-get(v.$colors, "aqua");
+                padding: 0.7rem;
+                a{
+                    padding: 3rem;
+                    text-decoration: none;
+                    color: white;
+                }
+                
+            }
+            .ConsultationButton{
+                background-color: map-get(v.$colors, "aqua");
+
+            }
+            .ProjectButton{
+                background-color: map-get(v.$colors, "gold");
+            }
+            .RealizationButton{
+                background-color: map-get(v.$colors, "pink");
+            }
+            }
+           
+    }
+    .ConsultationMenu{
+        width: 100%;
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            margin: 3.5rem;
+            font-family: 'Montserrat';
+            color: map-get(v.$colors, "gray" );
+            font-weight: 800;
+            font-size: 19px;
+            transition: 0.4s;
+            &:hover{
+                transition: 0.4s;
+                color: map-get(v.$colors, "aqua");
+            }
+          
+        }  
+        .Current{
+            color: map-get(v.$colors, "aqua");
+        }
+    }
+    .ProjectMenu{
+        width: 100%;
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            margin: 3.5rem;
+            font-family: 'Montserrat';
+            color: map-get(v.$colors, "gray" );
+            font-weight: 800;
+            font-size: 19px;
+            transition: 0.4s;
+            &:hover{
+                transition: 0.4s;
+                color: map-get(v.$colors, "gold" )!important;
+                
+            }
+        }   
+        .Current{
+            color: map-get(v.$colors, "gold" );
+        }
+    }
+    .RealizationMenu{
+        width: 100%;
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            margin: 3.5rem;
+            font-family: 'Montserrat';
+            color: map-get(v.$colors, "gray" );
+            font-weight: 800;
+            font-size: 19px;
+            transition: 0.4s;
+            &:hover{
+                transition: 0.4s;
+                color: map-get(v.$colors, "pink" );
+            }
+        }   
+        .Current{
+            color: map-get(v.$colors, "pink" );
+        }
+    }
+
+}
+
+@media (max-width:1500px){
+    .Processes{
+        .Wrapper{
+            width: 90%;
+        }
+    }
+}
+@media (max-width:1300px){
+    .Processes{
+        .Wrapper{
+            .Left{ 
+                img{
+                    margin: auto;
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:1000px){
+    .Processes{
+        .Wrapper{
+            width: 80%;
+           flex-direction: column;
+           .Left{ 
+                display: flex;
+                width: 100%;
+                margin-bottom: 2rem;
+                img{
+                    margin: auto;
+                    width: 600px;
+                    height: 600px;
+                }
+            }
+            .Right{
+                padding-left: 0.2rem;
+                margin: auto;
+            }
+        }
+    }
+}
+@media (max-width:750px){
+    .Processes{
+        .ConsultationMenu, .ProjectMenu, .RealizationMenu{
+            flex-direction: column;
+            a{
+             margin: 0.2rem;   
+             text-align: left;
+            }
+        }
+        
+        .Wrapper{
+            width: 90%;
+           .Left{ 
+                img{
+                    margin: auto;
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+            .Right{
+                padding-left: 0.2rem;
+                margin: auto;
+            }
+        }
+    }
+}
