@@ -6,7 +6,7 @@ import { fadeIn } from "../variants";
 
 function Offer() {
   const [block, openBlock] = useState(0);
-
+  
   return (
     <div className={Styles.Offer} id="offer">
       <main>
@@ -15,13 +15,28 @@ function Offer() {
         </div>
         <div className={Styles.Content}>
           <div className={Styles.Blocks}>
-            <div className={Styles.Design} onClick={() => openBlock(1)}>
+            <div
+              className={Styles.Design}
+              onClick={() => {
+                block === 1 ? openBlock(0) : openBlock(1);
+              }}
+            >
               <h4>UI / UX Design</h4>
             </div>
-            <div className={Styles.App} onClick={() => openBlock(2)}>
+            <div
+              className={Styles.App}
+              onClick={() => {
+                block === 2 ? openBlock(0) : openBlock(2);
+              }}
+            >
               <h4>Complex app</h4>
             </div>
-            <div className={Styles.Page} onClick={() => openBlock(3)}>
+            <div
+              className={Styles.Page}
+              onClick={() => {
+                block === 3 ? openBlock(0) : openBlock(3);
+              }}
+            >
               <h4>Advertising page</h4>
             </div>
           </div>
@@ -35,7 +50,12 @@ function Offer() {
               viewport={{ once: false, amount: 0.7 }}
             >
               <div className={Styles.DesignDescription}>
-                <div className={Styles.OfferArrow} onClick={() => openBlock(0)}>
+                <div
+                  className={Styles.OfferArrow}
+                  onClick={() => {
+                    openBlock(0);
+                  }}
+                >
                   <img src="../../img/homeArrow.svg" alt="arrow" />
                 </div>
                 <div className={Styles.DesignDescriptionContent}>
@@ -65,7 +85,7 @@ function Offer() {
                   <img src="../../img/homeArrow.svg" alt="arrow" />
                 </div>
                 <div className={Styles.AppDescriptionContent}>
-                  <h5>UI/UX Design</h5>
+                  <h5>Complex app</h5>
                   <hr />
                   <p>Modyfikacje działających stron i projektów graficznych</p>
                   <p>Tworzenie nowego wizerunku marki oraz logotypu</p>
@@ -91,7 +111,7 @@ function Offer() {
                   <img src="../../img/homeArrow.svg" alt="arrow" />
                 </div>
                 <div className={Styles.PageDescriptionContent}>
-                  <h5>UI/UX Design</h5>
+                  <h5>Advertising page</h5>
                   <hr />
                   <p>Modyfikacje działających stron i projektów graficznych</p>
                   <p>Tworzenie nowego wizerunku marki oraz logotypu</p>

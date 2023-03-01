@@ -45,6 +45,8 @@
                     cursor: pointer;
                     transition: all 0.5s;
                     color: #FBF9F9;
+                    height:min-content;
+                    
                     h4{
                         margin: auto;
                     }
@@ -104,6 +106,7 @@
                         transition: all 0.5s;
                         h5{
                            padding: map-get(v.$spacing, "sm" );
+                           text-align: center;
                         }
                         p{
                             padding: map-get(v.$spacing, "sm" );
@@ -113,32 +116,28 @@
                             margin: map-get(v.$spacing, "sm" );
                         }
                     }
-                    .DesignDescriptionContent{
-                        background-color: rgba(0, 167, 166, 0.3);
-                    }
-                    .AppDescriptionContent{
-                        background-color: rgba(252, 145, 0, 0.3);
-                    }
-                    .PageDescriptionContent{
-                        background-color: rgba(0, 193, 30, 0.3);
+                    .DesignDescriptionContent, .AppDescriptionContent, .PageDescriptionContent{
+                        background-color: rgba(255, 255, 255, 0.19);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        border-radius: map-get(v.$border-radius, "standard");
                     }
                     .DesignDescriptionContent:hover{
-                        background-color: rgba(0, 167, 166, 0.5);
+                        background-color: rgba(0, 167, 166, 0.2);
                     }
                     .AppDescriptionContent:hover{
-                        background-color: rgba(252, 145, 0, 0.5);
+                        background-color: rgba(252, 145, 0, 0.2);
                     }
                     .PageDescriptionContent:hover{
-                        background-color: rgba(0, 193, 30, 0.5);
+                        background-color: rgba(0, 193, 30, 0.2);
                     }
                 }
             }
         }
     }
     .ForProjects{
-        z-index: 2;
+        z-index: 3;
         position: relative;
-        width: 15%;
+        width: 300px;
         height: 20vh;
         display: flex;
         flex-direction: column;
@@ -152,13 +151,12 @@
                 text-transform: uppercase;
             }
             .HrHolder{
-                text-align: right;
                 width:40%;
                 display: flex;
-                align-items: center;
-                justify-content: flex-start;
                 hr{
+                    margin: auto;
                     width: 100%;
+                    border: 1px solid rgb(174, 174, 174);
                 }
             }
         }
@@ -183,5 +181,109 @@
         width: 100vw;
         height: 100vh;
         z-index: 1;
+    }
+}
+
+@media (max-width: 1500px){
+    h4, h5, p{
+        font-size: 90%;
+    }
+    main{
+        width: 100vw;
+        display: inline-block !important;
+        .Title{
+            width: 100% !important;
+            height: 30%;
+        }
+        .Content{
+            width: 100% !important;
+            height: 70%;
+            margin-left: map-get(v.$spacing , "lg");
+            .Descriptions{
+                margin-right: map-get(v.$spacing , "lg");
+            }
+            
+        }
+    }
+}
+@media (max-width: 1300px){
+    h4, h5, p{
+        font-size: 85%;
+    }
+}
+@media (max-width: 1200px){
+    h4, h5, p{
+        font-size: 80%;
+    }
+    p{
+        padding: map-get(v.$spacing, "xsm" ) !important;
+    }
+}
+@media (max-width:800px){
+    .ForProjects{
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: flex-end !important;
+    }
+    
+}
+@media (max-width:700px){
+    h4, h5, p{
+        font-size: 80%;
+    }
+    
+    p{
+        padding: map-get(v.$spacing, "xsm" ) !important;
+    }
+}
+@media (max-width:600px){
+    h4, h5, p{
+        font-size: 75%;
+    }
+    h1{
+        font-size: 300%!important;
+    }
+    
+    .Content{
+        display: inline-block !important;
+        margin-left: auto !important;
+        .Blocks{
+            height: 60%;
+            width: 80% !important;
+            margin-left: 10%!important;
+            justify-content: space-evenly!important;
+            .Design, .App, .Page{
+                height: 100% !important;
+            }
+        }
+        .Descriptions{
+            width: 80% !important;
+            margin-left: 10%;
+            .DesignDescription, .AppDescription, .PageDescription{
+                .OfferArrow{
+                    display: none !important;
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width:480px){
+    .Title{
+        height: 20% !important;
+    }
+    h1{
+        font-size: 250%!important;
+    }
+    .ForProjects{
+        display: none !important;
+    }
+}
+@media (max-width:400px){
+    .Offer{
+        background-size: cover;
+    }
+    h1{
+        font-size: 200%!important;
     }
 }
