@@ -50,14 +50,6 @@ function Offer() {
               viewport={{ once: false, amount: 0.7 }}
             >
               <div className={Styles.DesignDescription}>
-                <div
-                  className={Styles.OfferArrow}
-                  onClick={() => {
-                    openBlock(0);
-                  }}
-                >
-                  <img src="../../img/homeArrow.svg" alt="arrow" />
-                </div>
                 <div className={Styles.DesignDescriptionContent}>
                   <h5>UI/UX Design</h5>
                   <hr />
@@ -81,9 +73,6 @@ function Offer() {
             >
               <div></div>
               <div className={Styles.AppDescription}>
-                <div className={Styles.OfferArrow} onClick={() => openBlock(0)}>
-                  <img src="../../img/homeArrow.svg" alt="arrow" />
-                </div>
                 <div className={Styles.AppDescriptionContent}>
                   <h5>Complex app</h5>
                   <hr />
@@ -107,9 +96,6 @@ function Offer() {
               <div></div>
               <div></div>
               <div className={Styles.PageDescription}>
-                <div className={Styles.OfferArrow} onClick={() => openBlock(0)}>
-                  <img src="../../img/homeArrow.svg" alt="arrow" />
-                </div>
                 <div className={Styles.PageDescriptionContent}>
                   <h5>Advertising page</h5>
                   <hr />
