@@ -1,272 +1,99 @@
 @use "../style/Variables.scss" as v;
 
 .Offer{
-    min-height: 100vh;
-    background-image: url("../../img/offerBCKG.png");
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100vh;
+    width: 100%;
     overflow: hidden;
     position: relative;
     font-family: 'Montserrat';
-    
-    main{
-        z-index: 2;
-        height: 80vh;
-        position: relative;
-        z-index: 2;
-        display: flex;
-        .Title{
-            width: 50%;
-            display: flex;
-            h1{
-                margin: auto;
-                font-size: 3rem;
-                letter-spacing: 5px;
-            }
-        }
-        .Content{
-            width: 50%;
-            display: flex;
-            .Blocks{
-                width: 40%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                .Design, .App, .Page{
-                    font-weight: bold;
-                    margin: map-get(v.$spacing, "md" );
-                    width: 100%;
-                    min-height: 12%;
-                    background-color: black;
-                    border-radius: map-get(v.$border-radius, "standard");
-                    display: flex;
-                    cursor: pointer;
-                    transition: all 0.5s;
-                    color: #FBF9F9;
-                    
-                    
-                    h4{
-                        margin: auto;
-                    }
-                }
-                .Design{
-                    background-color: map-get(v.$colors, "aqua");
-                }
-                .Design:hover{
-                    background-color: #00A7A6;
-                }
-                .App{
-                    background-color: map-get(v.$colors, "orange");
-                }
-                .App:hover{
-                    background-color: #EA8700;
-                }
-                .Page{
-                    background-color: map-get(v.$colors, "green");
-                }
-                .Page:hover{
-                    background-color: #00C11E;
-                }
-            }
-            .Descriptions{
-                width: 60%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                div{
-                    height:fit-content;
-                    width: 90%;
-                    margin: map-get(v.$spacing, "md" );
-                }
-                .DesignDescription, .AppDescription, .PageDescription{
-                    min-height: 24%;
-                    display: flex;
-                    .DesignDescriptionContent, .AppDescriptionContent, .PageDescriptionContent{
-                        padding: map-get(v.$spacing, "md" );
-                        cursor: pointer;
-                        transition: all 0.5s;
-                        h5{
-                           padding: map-get(v.$spacing, "sm" );
-                           text-align: center;
-                        }
-                        p{
-                            padding: map-get(v.$spacing, "sm" );
-                        }
-                        hr{
-                            border: 1px solid #a8a8a8;
-                            margin: map-get(v.$spacing, "sm" );
-                        }
-                    }
-                    .DesignDescriptionContent, .AppDescriptionContent, .PageDescriptionContent{
-                        background-color: rgba(255, 255, 255, 0.19);
-                        border: 1px solid rgba(255, 255, 255, 0.3);
-                        border-radius: map-get(v.$border-radius, "standard");
-                    }
-                    .DesignDescriptionContent:hover{
-                        background-color: rgba(0, 167, 166, 0.2);
-                    }
-                    .AppDescriptionContent:hover{
-                        background-color: rgba(252, 145, 0, 0.2);
-                    }
-                    .PageDescriptionContent:hover{
-                        background-color: rgba(0, 193, 30, 0.2);
-                    }
-                }
-            }
-        }
-    }
-    .ForProjects{
-        z-index: 3;
-        position: relative;
-        width: 300px;
-        height: 20vh;
+    color:black;
+    z-index: 998;
+    main, .Page{
+        background-color: #FBF9F9;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: map-get(v.$spacing, "lg" );
-        .ForProjectsTitle{
-            display: flex;
-            width: 100%;
-            h4{
-                width: 60%;
-                text-transform: uppercase;
-            }
-            .HrHolder{
-                width:40%;
-                display: flex;
-                hr{
-                    margin: auto;
-                    width: 100%;
-                    border: 1px solid rgb(174, 174, 174);
-                }
-            }
+        align-items: center;
+        row-gap: 40px;
+        hr{
+            width: 30px;
+            margin: 0;
+            border: 1px solid #d2d2d2;
         }
-        button{
-            margin-top: map-get(v.$spacing, "sm" );
-            padding: map-get(v.$spacing, "xmd" ) map-get(v.$spacing, "sm" );
-            background-color: map-get(v.$colors, "aqua");
-            border: none;
-            border-radius: map-get(v.$border-radius, "standard");
+        h5{
+            color: #727272;
             cursor: pointer;
             transition: all 0.5s;
         }
-        button:hover{
-            background-color: #00a2c3;
+        h5:hover{
+            color: black;
+            margin-left: 20px;
         }
     }
-    .BackgroundBlur{
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        left: 0;
-        top:0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 1;
+    .Design, .App, .Page{
+        position: relative;
+        row-gap: 30px;
+        color: white;
+        
+        
+        
+        p{
+           font-weight: 300;
+           font-size: 14px;
+        }
+        .HrHolder{
+            width: 65%;
+            align-self: flex-end;
+            display: flex;
+            position: relative;
+            hr{
+                width: 100%;
+                border: 1px solid white;
+                margin: auto;
+            }
+            p{
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            p:hover{
+                padding-right: 25px;
+            }
+        }
     }
+    .Design{
+        background-color: #45c5c5;
+    }
+    .Page{
+        background-color: #c88e3b;
+    }
+    .App{
+        background-color: #7653D6;
+    }
+    
+    
 }
 
-@media (max-width: 1500px){
-    h4, h5, p{
-        font-size: 90%;
-    }
-    main{
-        width: 100vw;
-        display: inline-block !important;
-        .Title{
-            width: 100% !important;
-            height: 30%;
-            h1{
-                margin-left: 10% !important;
-            }
-        }
-        .Content{
-            width: 100% !important;
-            padding-left: 10%;
-            height: 70%;
-            margin-left: map-get(v.$spacing , "lg");
-            .Blocks{
-                .Design, .App, .Page{
-                    min-height: 15% !important;
-                }
-            }
-            .Descriptions{
-                margin-right: map-get(v.$spacing , "lg");
-            }
-            
-        }
-    }
-}
 @media (max-width: 1000px){
-    .Content{
-        padding-left: 0 !important;
+    .HrHolder{
+        width: 70% !important;
     }
 }
 
-@media (max-width:700px){
-    h4, h5, p{
-        font-size: 80%;
-    }
-    
-   
-    p{
-        padding: map-get(v.$spacing, "xsm" ) !important;
-    }
-    
-}
-@media (max-width:600px){
-    h4, h5, p{
-        font-size: 75%;
-    }
-    h1{
-        font-size: 300%!important;
-    }
-    
-    .Content{
-        display: inline-block !important;
-        margin-left: auto !important;
-        .Blocks{
-            height: 60%;
-            width: 80% !important;
-            margin-left: 10%!important;
-            justify-content: space-evenly!important;
-            .Design, .App, .Page{
-                height: 100% !important;
-            }
+@media (max-width: 700px){
+    .HrHolder{
+        width: 70% !important;
+        align-self: center !important;
+        p{
+            display: none;
         }
-        .Descriptions{
-            width: 80% !important;
-            margin-left: 10%;
-            .DesignDescription, .AppDescription, .PageDescription{
-                .OfferArrow{
-                    display: none !important;
-                }
-            }
-        }
-        
-        
     }
-    .ForProjects{
-        display: none !important;
-    }
-    
 }
-@media (max-width:480px){
-    .Title{
-        height: 20% !important;
-    }
-    h1{
-        font-size: 250%!important;
-    }
-    
-}
-@media (max-width:400px){
-    .Offer{
-        background-size: cover;
-    }
-    h1{
-        font-size: 200%!important;
+@media (max-width: 414px){
+    .HrHolder{
+        width: 20% !important;
     }
 }
