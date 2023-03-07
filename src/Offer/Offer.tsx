@@ -60,8 +60,6 @@ function Offer() {
                   </p>
                 </div>
               </div>
-              <div></div>
-              <div></div>
             </motion.div>
           ) : block === 2 ? (
             <motion.div
@@ -71,7 +69,6 @@ function Offer() {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
             >
-              <div></div>
               <div className={Styles.AppDescription}>
                 <div className={Styles.AppDescriptionContent}>
                   <h5>Complex app</h5>
@@ -83,7 +80,6 @@ function Offer() {
                   </p>
                 </div>
               </div>
-              <div></div>
             </motion.div>
           ) : block === 3 ? (
             <motion.div
@@ -93,8 +89,6 @@ function Offer() {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
             >
-              <div></div>
-              <div></div>
               <div className={Styles.PageDescription}>
                 <div className={Styles.PageDescriptionContent}>
                   <h5>Advertising page</h5>

@@ -178,11 +178,20 @@
         .Title{
             width: 100% !important;
             height: 30%;
+            h1{
+                margin-left: 10% !important;
+            }
         }
         .Content{
             width: 100% !important;
+            padding-left: 10%;
             height: 70%;
             margin-left: map-get(v.$spacing , "lg");
+            .Blocks{
+                .Design, .App, .Page{
+                    min-height: 15% !important;
+                }
+            }
             .Descriptions{
                 margin-right: map-get(v.$spacing , "lg");
             }
@@ -190,16 +199,22 @@
         }
     }
 }
-
+@media (max-width: 1000px){
+    .Content{
+        padding-left: 0 !important;
+    }
+}
 
 @media (max-width:700px){
     h4, h5, p{
         font-size: 80%;
     }
     
+   
     p{
         padding: map-get(v.$spacing, "xsm" ) !important;
     }
+    
 }
 @media (max-width:600px){
     h4, h5, p{
