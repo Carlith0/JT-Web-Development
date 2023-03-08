@@ -1,0 +1,123 @@
+@use "../style/Variables.scss" as v;
+
+.Projects{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180.06deg, #1E1E1E 14.1%, #000000 99.94%);
+    overflow: hidden;
+    .Title, .Scroll{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1{
+            text-transform: uppercase;
+            font-size: 64px;
+        }
+    }
+    .Slider{
+        width: 80%;
+        height: 60%;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        align-items: center;
+        
+        .Projekt{
+            .Description{
+                padding-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                button{
+                    padding: 13px 12px;
+                    background-color: map-get(v.$colors, "aqua");
+                    border: none;
+                    border-radius: map-get(v.$border-radius, "standard");
+                    font-size: 14px;
+                    cursor: pointer;
+                    transition: all 0.5s;
+                }
+                button:hover{
+                    background-color: map-get(v.$colors, "dark-aqua");
+                }
+            }
+            img{
+                border-radius: map-get(v.$border-radius, "standard");
+                width: 100%;
+            }
+        }
+    }
+    .Scroll{
+        display: flex;
+        column-gap: 30px;
+        align-items: baseline;
+        font-family: "Montserrat";
+        color: #a4a4a4;
+        img{
+            width: 10px;
+        }
+        .LeftArrow{
+            transform: rotate(90deg);
+        }
+        .RightArrow{
+            transform: rotate(-90deg);
+        }
+    }
+    .ActiveProject{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .ActiveBack{
+            position: absolute;
+            left: 40px;
+            top: 30px;
+            display: flex;
+            cursor: pointer;
+            img{
+                transform: rotate(90deg);
+                width: 10px;
+            }      
+            p{
+                padding-left: 15px;  
+                transition: all 0.5s; 
+                color: #C0C0C0;
+            }
+            p:hover{
+                color: #f9f9f9;
+            }
+            p:hover{
+                padding-left: 20px;
+            }
+        }
+        .ActiveImage{
+            height: 50%;
+           
+                border-radius: map-get(v.$border-radius, "standard");
+            
+        }
+        .ActiveDescription{
+            height: 50%;
+            width: 30%;
+            padding-left: map-get(v.$spacing, "xl");
+            font-weight: 300;
+            letter-spacing: 1px;
+            p{
+                padding-bottom: 5%;
+            }
+            hr{
+                margin: 0;
+            }
+            .ActiveIcons{
+                padding-top: 5%;
+                width: 100%;
+                display: flex;
+                column-gap: 20px;
+            }
+        }
+    }
+}
