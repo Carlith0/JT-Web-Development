@@ -6,116 +6,226 @@ import { fadeIn } from "../variants";
 
 function Offer() {
   const [block, openBlock] = useState(0);
+  if (block === 4) {
+    openBlock(0);
+  }
 
   return (
     <div className={Styles.Offer} id="offer">
-      <main>
-        <div className={Styles.Title}>
-          <h1>Co oferujemy?</h1>
-        </div>
-        <div className={Styles.Content}>
-          <div className={Styles.Blocks}>
-            <div className={Styles.Design} onClick={() => openBlock(1)}>
-              <h4>UI / UX Design</h4>
-            </div>
-            <div className={Styles.App} onClick={() => openBlock(2)}>
-              <h4>Complex app</h4>
-            </div>
-            <div className={Styles.Page} onClick={() => openBlock(3)}>
-              <h4>Advertising page</h4>
-            </div>
-          </div>
-
-          {block === 1 ? (
-            <motion.div
-              className={Styles.Descriptions}
-              variants={fadeIn("left", 0, 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-            >
-              <div className={Styles.DesignDescription}>
-                <div className={Styles.OfferArrow} onClick={() => openBlock(0)}>
-                  <img src="../../img/homeArrow.svg" alt="arrow" />
-                </div>
-                <div className={Styles.DesignDescriptionContent}>
-                  <h5>UI/UX Design</h5>
-                  <hr />
-                  <p>Modyfikacje działających stron i projektów graficznych</p>
-                  <p>Tworzenie nowego wizerunku marki oraz logotypu</p>
-                  <p>
-                    Projektowanie wyglądu aplikacji, stron internetowych, gier
-                  </p>
-                </div>
-              </div>
-              <div></div>
-              <div></div>
-            </motion.div>
-          ) : block === 2 ? (
-            <motion.div
-              className={Styles.Descriptions}
-              variants={fadeIn("left", 0, 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-            >
-              <div></div>
-              <div className={Styles.AppDescription}>
-                <div className={Styles.OfferArrow} onClick={() => openBlock(0)}>
-                  <img src="../../img/homeArrow.svg" alt="arrow" />
-                </div>
-                <div className={Styles.AppDescriptionContent}>
-                  <h5>UI/UX Design</h5>
-                  <hr />
-                  <p>Modyfikacje działających stron i projektów graficznych</p>
-                  <p>Tworzenie nowego wizerunku marki oraz logotypu</p>
-                  <p>
-                    Projektowanie wyglądu aplikacji, stron internetowych, gier
-                  </p>
-                </div>
-              </div>
-              <div></div>
-            </motion.div>
-          ) : block === 3 ? (
-            <motion.div
-              className={Styles.Descriptions}
-              variants={fadeIn("left", 0, 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-            >
-              <div></div>
-              <div></div>
-              <div className={Styles.PageDescription}>
-                <div className={Styles.OfferArrow} onClick={() => openBlock(0)}>
-                  <img src="../../img/homeArrow.svg" alt="arrow" />
-                </div>
-                <div className={Styles.PageDescriptionContent}>
-                  <h5>UI/UX Design</h5>
-                  <hr />
-                  <p>Modyfikacje działających stron i projektów graficznych</p>
-                  <p>Tworzenie nowego wizerunku marki oraz logotypu</p>
-                  <p>
-                    Projektowanie wyglądu aplikacji, stron internetowych, gier
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ) : null}
-        </div>
-      </main>
-      <div className={Styles.ForProjects}>
-        <div className={Styles.ForProjectsTitle}>
-          <h4>For Projects</h4>
-          <div className={Styles.HrHolder}>
+      {block === 0 ? (
+        <>
+          <main>
             <hr />
+            <h5
+              onClick={() => {
+                openBlock(1);
+              }}
+            >
+              UI / UX Design
+            </h5>
+            <h5
+              onClick={() => {
+                openBlock(2);
+              }}
+            >
+              Advertising Page
+            </h5>
+            <h5
+              onClick={() => {
+                openBlock(3);
+              }}
+            >
+              Complex app
+            </h5>
+          </main>
+        </>
+      ) : block === 1 ? (
+        <>
+          <main
+            className={Styles.Design}
+            onClick={() => {
+              openBlock(2);
+            }}
+          >
+            <motion.h1
+              variants={fadeIn("left", 0.3, 0.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+            >
+              UI / UX Design
+            </motion.h1>
+            <div className={Styles.HrHolder}>
+              <motion.hr
+                variants={fadeIn("", 0.1, 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              />
+              <motion.p
+                variants={fadeIn("", 1.2, 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Next
+              </motion.p>
+            </div>
+            <div className={Styles.Description}>
+              <motion.p
+                variants={fadeIn("right", 0.6, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Modyfikacje działających stron <br /> i projektów graficznych
+              </motion.p>
+              <br />
+              <motion.p
+                variants={fadeIn("right", 0.8, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Tworzenie nowego wizerunku <br /> marki oraz logotypu
+              </motion.p>
+              <br />
+              <motion.p
+                variants={fadeIn("right", 1, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Projektowanie wyglądu aplikacji <br /> oraz stron internetowych
+              </motion.p>
+            </div>
+          </main>
+        </>
+      ) : block === 2 ? (
+        <>
+          <div
+            className={Styles.Page}
+            onClick={() => {
+              openBlock(3);
+            }}
+          >
+            <motion.h1
+              variants={fadeIn("left", 0.3, 0.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+            >
+              Advertising Page
+            </motion.h1>
+            <div className={Styles.HrHolder}>
+              <motion.hr
+                variants={fadeIn("", 0.1, 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              />
+              <motion.p
+                variants={fadeIn("", 1.2, 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Next
+              </motion.p>
+            </div>
+            <div className={Styles.Description}>
+              <motion.p
+                variants={fadeIn("right", 0.6, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Modyfikacje działających stron <br /> i projektów graficznych
+              </motion.p>
+              <br />
+              <motion.p
+                variants={fadeIn("right", 0.8, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Tworzenie nowego wizerunku <br /> marki oraz logotypu
+              </motion.p>
+              <br />
+              <motion.p
+                variants={fadeIn("right", 1, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Projektowanie wyglądu aplikacji <br /> oraz stron internetowych
+              </motion.p>
+            </div>
           </div>
-        </div>
-        <button type="button" onClick={() => (location.href = "#projects")}>
-          Look here
-        </button>
-      </div>
-      <div className={Styles.BackgroundBlur}></div>
+        </>
+      ) : block === 3 ? (
+        <>
+          <main
+            className={Styles.App}
+            onClick={() => {
+              openBlock(0);
+            }}
+          >
+            <motion.h1
+              variants={fadeIn("left", 0.3, 0.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
+            >
+              Complex App
+            </motion.h1>
+            <div className={Styles.HrHolder}>
+              <motion.hr
+                variants={fadeIn("", 0.1, 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              />
+              <motion.p
+                variants={fadeIn("", 1.2, 0.5)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Back to offer
+              </motion.p>
+            </div>
+            <div className={Styles.Description}>
+              <motion.p
+                variants={fadeIn("right", 0.6, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Modyfikacje działających stron <br /> i projektów graficznych
+              </motion.p>
+              <br />
+              <motion.p
+                variants={fadeIn("right", 0.8, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Tworzenie nowego wizerunku <br /> marki oraz logotypu
+              </motion.p>
+              <br />
+              <motion.p
+                variants={fadeIn("right", 1, 0.3)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                Projektowanie wyglądu aplikacji <br /> oraz stron internetowych
+              </motion.p>
+            </div>
+          </main>
+        </>
+      ) : null}
     </div>
   );
 }
